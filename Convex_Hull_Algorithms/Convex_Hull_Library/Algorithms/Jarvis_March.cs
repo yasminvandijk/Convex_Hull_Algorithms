@@ -10,6 +10,10 @@ namespace Convex_Hull_Library.Algorithms
         public static List<Point2D> ComputeConvexHull(List<Point2D> points)
         {
             // TODO null checks and point sets with less than 3 points
+            if (points == null || points.Count < 3)
+            {
+                throw new NotImplementedException();
+            }
             
             Point2D leftMostPoint = Point2D.LeftMostPoint(points);
 

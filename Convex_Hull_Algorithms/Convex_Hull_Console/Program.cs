@@ -18,7 +18,8 @@ namespace Convex_Hull_Console
                 new Point2D(1, 0)
             };
 
-            List<Point2D> result = Jarvis_March.ComputeConvexHull(points);
+            //List<Point2D> result = Jarvis_March.ComputeConvexHull(points);
+            List<Point2D> result = Graham_Scan.ComputeConvexHull(points);
 
             result.ForEach(p => Console.WriteLine($"{p.X} {p.Y}"));
         }
